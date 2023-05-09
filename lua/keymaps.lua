@@ -1,0 +1,24 @@
+local keymap = vim.keymap
+
+keymap.set('n', 'te', ':tabedit<Return>', { silent = true })
+keymap.set('n', 'tp', ':tabprevious<Return>', { silent = true })
+keymap.set('n', 'tn', ':tabNext<Return>', { silent = true })
+
+-- Moving between the splited windows
+keymap.set('n', '<C-k>', '<C-w><Up>')
+keymap.set('n', '<C-j>', '<C-w><Down>')
+keymap.set('n', '<C-h>', '<C-w><Left>')
+keymap.set('n', '<C-l>', '<C-w><Right>')
+
+-- Resize window
+keymap.set('n', '<C-up>', '<C-w>-')
+keymap.set('n', '<C-down>', '<C-w>+')
+keymap.set('n', '<C-left>', '<C-w><')
+keymap.set('n', '<C-right>', '<C-w>>')
+
+-- Increment/Decrement
+keymap.set('n', '+', '<C-a>')
+keymap.set('n', '-', '<C-x>')
+
+-- Select all
+keymap.set('n', '<C-a>', 'gg<S-v>G')

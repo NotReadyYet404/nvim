@@ -1,0 +1,12 @@
+require('base')
+require('keymaps')
+require('plugins')
+
+-- 打印文件类型
+vim.api.nvim_command([[
+  augroup filetype
+    autocmd!
+    autocmd BufEnter * lua print(vim.bo.filetype)
+  augroup END
+]])
+
